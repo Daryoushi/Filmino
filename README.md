@@ -412,5 +412,5 @@ Computer Engineering Student & Software Developer
 ---
 
 <p align="center">
-  Built with ❤️ using Next.js & TypeScript
+  Built with ❤️
 </p>
