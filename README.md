@@ -405,8 +405,8 @@ Filmino is not affiliated with or endorsed by TMDB.
 
 Computer Engineering Student & Software Developer
 
-* GitHub: [@your-username](https://github.com/your-username)
-* LinkedIn: [Your LinkedIn](https://linkedin.com/)
+* GitHub: [Daryoushi](https://github.com/Daryoushi)
+* LinkedIn: [LinkedIn]([https://linkedin.com/](https://www.linkedin.com/in/abalfazl-daryoushi))
 * Telegram: [@daryoushi_dev](https://t.me/daryoushi_dev)
 
 
