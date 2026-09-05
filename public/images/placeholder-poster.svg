@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="750" viewBox="0 0 500 750" fill="none">
+  <rect width="500" height="750" fill="#0E121D"/>
+  <rect x="20" y="20" width="460" height="710" rx="16" stroke="#1E2436" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="250" cy="330" r="54" fill="#171C2B"/>
+  <path d="M232 305L280 330L232 355V305Z" fill="#F59E0B"/>
+  <text x="250" y="430" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="20" font-weight="600" text-anchor="middle">تصویر پوستر موجود نیست</text>
+  <text x="250" y="465" fill="#64748B" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Cinematix TMDB Showcase</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" fill="none">
+  <rect width="1280" height="720" fill="#07090E"/>
+  <rect x="24" y="24" width="1232" height="672" rx="24" stroke="#1E2436" stroke-width="2" stroke-dasharray="12 12"/>
+  <circle cx="640" cy="320" r="70" fill="#121624"/>
+  <path d="M620 290L676 320L620 350V290Z" fill="#F59E0B"/>
+  <text x="640" y="440" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="24" font-weight="600" text-anchor="middle">تصویر پس‌زمینه اثر موجود نیست</text>
+  <text x="640" y="480" fill="#64748B" font-family="system-ui, sans-serif" font-size="16" text-anchor="middle">Cinematix TMDB Showcase</text>
+</svg>

@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #e50914;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.08);
+  --ring: #e5a00d;
+  --radius: 0.75rem;
+
+  --cinema-gold: #e5a00d;
+  --cinema-red: #e50914;
+  --cinema-dark: #08090c;
+}
+
+.dark {
+  --background: #08090c;
+  --foreground: #f5f5f5;
+  --card: #101116;
+  --card-foreground: #f5f5f5;
+  --popover: #15171d;
+  --popover-foreground: #f5f5f5;
+  --primary: #e5a00d;
+  --primary-foreground: #08090c;
+  --secondary: #15171d;
+  --secondary-foreground: #f5f5f5;
+  --muted: #15171d;
+  --muted-foreground: #9296a3;
+  --accent: #15171d;
+  --accent-foreground: #f5f5f5;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: #e5a00d;
+
+  --cinema-gold: #e5a00d;
+  --cinema-red: #e50914;
+  --cinema-dark: #08090c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cinema-gold: var(--cinema-gold);
+  --color-cinema-red: var(--cinema-red);
+  --color-cinema-dark: var(--cinema-dark);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+* {
+  border-color: var(--border);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-yekan-bakh), "Yekan Bakh FaNum", "Yekan Bakh", "IRANYekan", system-ui, -apple-system, sans-serif;
+  font-feature-settings: "ss01" on, "cv01" on, "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  letter-spacing: -0.015em;
+}
+
+/* Custom Cinema Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+  opacity: 0.4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(14, 18, 29, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* FlipText Animation Styles */
+.flip-char {
+  color: inherit;
+  -webkit-text-fill-color: transparent;
+  height: 1.2em;
+  line-height: 1.2em;
+  vertical-align: middle;
+  animation: flip var(--flip-duration, 2.2s) var(--flip-delay, 0s) var(--flip-iteration, infinite) ease;
+}
+
+.flip-char::before,
+.flip-char::after {
+  color: inherit;
+  -webkit-text-fill-color: currentColor;
+  content: attr(data-char);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  animation: fade var(--flip-duration, 2.2s) var(--flip-delay, 0s) var(--flip-iteration, infinite) ease;
+}
+
+/* Front Face (Initial) */
+.flip-char::after {
+  transform: translate(-50%, -50%) translateZ(0.6em);
+}
+
+/* Bottom Face (Rotates in) */
+.flip-char::before {
+  transform: translate(-50%, -50%) rotateX(-90deg) translateZ(0.6em);
+  opacity: 0;
+  --opacity: 1;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25%,
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  30%,
+  100% {
+    opacity: var(--opacity, 0);
+  }
+}
+
