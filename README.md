@@ -409,8 +409,4 @@ Computer Engineering Student & Software Developer
 * LinkedIn: [Your LinkedIn](https://linkedin.com/)
 * Telegram: [@daryoushi_dev](https://t.me/daryoushi_dev)
 
----
 
-<p align="center">
-  Built with ❤️
-</p>
